@@ -1,4 +1,4 @@
-from InclssActyWee2.bank import BankAccount
+from bank import BankAccount
 
 def test_deposit_increases_balance():
     account = BankAccount(balance=100)

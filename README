@@ -5,79 +5,71 @@ Name: Han Htoo Aung
 
 This repository contains the Python exercises completed for the first three weeks of the ST211 course.
 
-## Week 1 - Roman Numeral Converter
+## Verification status
 
-File: `week 1/number_converter.py`
+Verified with Python 3.14 and pytest.
 
-This program converts Roman numerals into integers using a standard numeral mapping:
+| Folder | Status | Notes |
+| --- | --- | --- |
+| `Week1_Assertion` | Working | Simple assertion and float-precision checks pass. |
+| `Week1_Roman_Number` | Working | Fixed compatibility import so the test file can import `roman_converter`. |
+| `Week2_Bank` | Working | Deposit/withdraw logic matches the test expectations. |
+| `Week2_Grade` | Working | Grade thresholds and validation pass. |
+| `Week3_Positive and Negative` | Working | Email and age validation checks pass. |
+| `Week3_Shopping` | Working | Added a compatibility `add()` method for the test suite. |
 
-- I = 1
-- V = 5
-- X = 10
-- L = 50
-- C = 100
-- D = 500
-- M = 1000
+## Folder overview
 
-Features:
-- Converts valid Roman numerals to integers
-- Handles lowercase and uppercase input
-- Raises a `ValueError` for invalid characters
-- Includes a simple command-line interface for user input
+### Week 1 - Assertion practice
 
-Example:
+Contains simple Python assertion examples for collections and floating point precision.
 
-```python
-roman_to_int("XIV")
-# Output: 14
-```
-
-## Week 2 - Bank Account
+### Week 1 - Roman numeral converter
 
 Files:
-- `week 2/bank.py`
-- `week 2/test_bank.py`
-- `week 2/test.py`
+- `Week1_Roman_Number/number_converter.py`
+- `Week1_Roman_Number/roman_converter.py` (compatibility import for the tests)
+- `Week1_Roman_Number/test_number.py`
 
-This exercise implements a simple `BankAccount` class with:
+This program converts Roman numerals to integers and checks for valid Roman numeral formatting.
 
-- `deposit(amount)` for adding funds
-- `withdraw(amount)` for removing funds
-- balance validation checks
-- error handling for invalid or insufficient amounts
-
-Rules:
-- Deposit amount must be positive
-- Withdrawal amount must be positive
-- Withdrawal cannot exceed the current balance
-
-## Week 3 - Shopping Cart
+### Week 2 - Bank account
 
 Files:
-- `week 3/shoppingcart.py`
-- `week 3/test_shopping.py`
-- `week 3/test_floats.py`
+- `Week2_Bank/bank.py`
+- `Week2_Bank/test_bank.py`
+- `Week2_Bank/test_independent.py`
+- `Week2_Bank/test_dependent.py`
 
-This exercise builds a basic shopping cart that can:
+This exercise implements a simple `BankAccount` class with deposit and withdrawal behavior.
 
-- add items with a name and price
-- count the number of items
-- calculate the total cost
+### Week 2 - Grade calculator
 
-Key methods:
-- `add_item(name, price)`
-- `count()`
-- `total()`
+Files:
+- `Week2_Grade/grade.py`
+- `Week2_Grade/test_grade.py`
 
-The repository also includes a float precision test using `pytest.approx`, which demonstrates how floating-point arithmetic can be compared more reliably.
+This exercise converts numeric scores to letter grades and validates out-of-range values.
+
+### Week 3 - Positive and negative validation
+
+Files:
+- `Week3_Positive and Negative/validators.py`
+- `Week3_Positive and Negative/test_positive.py`
+- `Week3_Positive and Negative/test_negative.py`
+
+This exercise validates email format and age values, raising errors for invalid inputs.
+
+### Week 3 - Shopping cart
+
+Files:
+- `Week3_Shopping/shoppingcart.py`
+- `Week3_Shopping/test_shopping.py`
+- `Week3_Shopping/test_floats.py`
+
+This exercise builds a shopping cart that tracks item count and total value.
 
 ## Summary
 
-The project covers the following topics across the first three weeks:
-
-- Roman numeral conversion and validation
-- Basic Python class design for bank operations
-- Data handling and total calculation in a shopping cart
-- Basic unit testing with `pytest`
-- Floating-point comparison in Python
+The repository now verifies successfully across all folders after correcting the import compatibility issue in the Roman numeral folder and the method name mismatch in the shopping cart implementation.
 
