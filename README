@@ -1,1 +1,83 @@
-st211-quizzes-6705140067
+# ST211 Quizzes - Week 1 to Week 3
+
+Student ID: 6705140067  
+Name: Han Htoo Aung
+
+This repository contains the Python exercises completed for the first three weeks of the ST211 course.
+
+## Week 1 - Roman Numeral Converter
+
+File: `week 1/number_converter.py`
+
+This program converts Roman numerals into integers using a standard numeral mapping:
+
+- I = 1
+- V = 5
+- X = 10
+- L = 50
+- C = 100
+- D = 500
+- M = 1000
+
+Features:
+- Converts valid Roman numerals to integers
+- Handles lowercase and uppercase input
+- Raises a `ValueError` for invalid characters
+- Includes a simple command-line interface for user input
+
+Example:
+
+```python
+roman_to_int("XIV")
+# Output: 14
+```
+
+## Week 2 - Bank Account
+
+Files:
+- `week 2/bank.py`
+- `week 2/test_bank.py`
+- `week 2/test.py`
+
+This exercise implements a simple `BankAccount` class with:
+
+- `deposit(amount)` for adding funds
+- `withdraw(amount)` for removing funds
+- balance validation checks
+- error handling for invalid or insufficient amounts
+
+Rules:
+- Deposit amount must be positive
+- Withdrawal amount must be positive
+- Withdrawal cannot exceed the current balance
+
+## Week 3 - Shopping Cart
+
+Files:
+- `week 3/shoppingcart.py`
+- `week 3/test_shopping.py`
+- `week 3/test_floats.py`
+
+This exercise builds a basic shopping cart that can:
+
+- add items with a name and price
+- count the number of items
+- calculate the total cost
+
+Key methods:
+- `add_item(name, price)`
+- `count()`
+- `total()`
+
+The repository also includes a float precision test using `pytest.approx`, which demonstrates how floating-point arithmetic can be compared more reliably.
+
+## Summary
+
+The project covers the following topics across the first three weeks:
+
+- Roman numeral conversion and validation
+- Basic Python class design for bank operations
+- Data handling and total calculation in a shopping cart
+- Basic unit testing with `pytest`
+- Floating-point comparison in Python
+
