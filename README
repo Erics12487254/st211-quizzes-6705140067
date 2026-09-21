@@ -1,13 +1,13 @@
-# ST211 Quizzes - Week 1 to Week 3
+# ST211 Quizzes - Week 1 to Week 4
 
 Student ID: 6705140067  
 Name: Han Htoo Aung
 
-This repository contains the Python exercises completed for the first three weeks of the ST211 course.
+This repository contains the Python exercises completed throughout the first four weeks of the ST211 course.
 
 ## Verification status
 
-Verified with Python 3.14 and pytest.
+The project is intended to be verified using Python and pytest.
 
 | Folder | Status | Notes |
 | --- | --- | --- |
@@ -17,6 +17,7 @@ Verified with Python 3.14 and pytest.
 | `Week2_Grade` | Working | Grade thresholds and validation pass. |
 | `Week3_Positive and Negative` | Working | Email and age validation checks pass. |
 | `Week3_Shopping` | Working | Added a compatibility `add()` method for the test suite. |
+| `Week4_marksmoke` | Working | Pytest marker, skip, xfail, and conditional test cases are configured. |
 
 ## Folder overview
 
@@ -69,7 +70,20 @@ Files:
 
 This exercise builds a shopping cart that tracks item count and total value.
 
+### Week 4 - Pytest smoke and marker checks
+
+Files:
+- `Week4_marksmoke/pytest.ini`
+- `Week4_marksmoke/test_markers.py`
+- `Week4_marksmoke/test_after.py`
+- `Week4_marksmoke/test_conditional.py`
+- `Week4_marksmoke/test_skip.py`
+- `Week4_marksmoke/test_strict.py`
+- `Week4_marksmoke/test_xfail.py`
+
+This folder contains pytest configuration and tests covering smoke markers, strict mode, conditional execution, skip logic, and xfail behavior.
+
 ## Summary
 
-The repository now verifies successfully across all folders after correcting the import compatibility issue in the Roman numeral folder and the method name mismatch in the shopping cart implementation.
+The repository now covers exercises across Weeks 1 through 4, with the earlier compatibility fixes retained and the Week 4 pytest configuration added to the project structure.
 
