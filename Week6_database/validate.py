@@ -1,0 +1,20 @@
+def is_valid_login(username, password):
+    return bool(username) and bool(password)
+
+import csv
+import pytest
+from validate import is_valid_login
+
+def load_login_cases():
+    cases = []
+    with open("logins.csv") as f:
+        for row in csv.DictReader(f):  # reads header
+            expected = row["valid"] == "True"  # convert to bool
+            cases.append((row["username"], row["password"], expected))
+    return cases
+
+@pytest.mark.parametrize("username,password,expected", load_login_cases())
+def test_login_validation(username, password, expected):
+    assert is_valid_login(username, password) == expected
+
+
